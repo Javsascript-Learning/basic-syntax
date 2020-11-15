@@ -6,23 +6,53 @@ numbers[2] = 3
 numbers[3] = 4
 numbers[4] = 5
 
+// Iteration #1
+numbers.forEach(value => {
+    console.log(`${value}`)
+})
+// Iteration #2
+for (var i = 0; i < numbers.length; i++) {
+    console.log(numbers[i])
+}
+// Iteration #3
+// while(numbers.length) {
+//     console.log(numbers)
+// }
+
 // Create an Array #2
 var names = ["kaveh","kiarash"]
 
 // push it to the end of the Array
 names.push("mohammad")
 
-// Delete the last array index
+// Iterate #1
+names.forEach((value,index) => {
+    console.log(`${index} : ${value}`)
+})
+
+// Iterate #2
+for (var  i = 0; i < names.length; i++) {
+    console.log(names[i])
+}
+
+/* if I put for loop or forEach after names.pop(), mohammad will be deleted from list,
+* because pop() delete only the last array */
 names.pop()
+
 
 // Delete an array using index
 delete names[0]
 
-// find an array
-names.find(name => name == "mohammad") // return Mohammad
-names.find(name => name == "danial") // return undefined, means there is no danial in array
+// FIND AN ARRAY
+//Return value (string), kiarash
+console.log(names.find(name => name === "kiarash"))
+//Return undefined, means reza is not exist
+console.log(names.find(name => name === "reza"))
 
 // findindex : if the value exists in Array , return 1 , otherwise -1
 const result = names.findIndex(name => name == "kiarash")
-// return -1
-const result2 = names.findIndex(name => name == "mohsen")
+console.log(result)
+
+
+
+
