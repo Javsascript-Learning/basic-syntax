@@ -1,29 +1,42 @@
-// SET
-// Create the set
-var mySet = new Set()
-// #1 - Add - add the value
-mySet.add(90)
-mySet.add('Kaveh')
-mySet.add({name : 'Kaveh'})
-mySet.add([1,2,3,4,5,6])
+var set = new Set()
+set.add(1990)
+set.add('Kaveh')
+set.add({
+    name : 'Kiarash',
+    family : 'Rezahanjani',
+    bornIn : 'Tehran'
+})
+set.add([1,2,3,4,5])
 
-//Show the values
-for (var showValues of mySet) {
-    console.log(showValues)
-} // Output ==> 90 Kaveh { name: 'Kaveh' } [ 1, 2, 3, 4, 5, 6 ]
+// ITERATIONS > N.01
+set.forEach(item =>{
+    console.log(item)
+})
 
-// #2 - Delete
-mySet.delete(90)
-console.log(mySet) // Output ==> 90 is deleted
+//N.02
+for (var i of set) {
+    console.log(i)
+}
 
-// #3 - Clear
-mySet.clear()
+//N.03
+for (var i in set) {
+    console.log(i)
+}
 
-// #4 - Has
-mySet.has(90)
+// delete method
+set.delete('Kaveh')
 
-// #5 - Size
-console.log(mySet.size)
+for (var i of set) {
+    console.log(i)
+}
+
+// has method > return true or false
+console.log(set.has(1990))
+
+// clear method
+set.clear()
+console.log(set)
+
 
 /* There is a diffrence between Set and Array, the diffrent is in Array when we want to store repeatedly values,
 it show those values,however, in Set we have no repeatedly values and it clear them automatically in our set,
