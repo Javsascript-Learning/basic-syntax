@@ -15,7 +15,7 @@ class student {
     }
 }
 // Initialize
-var myStudent = new student ("Kaveh","Rezaei",29,"Tehran")
+var myStudent = new student ("Kaveh","Rezaei",30,"Tehran")
 
 //Call the class method
 myStudent.showDetails()
